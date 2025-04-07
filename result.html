@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz Results</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        background: #fef9e7;
+        padding: 50px;
+      }
+      .box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Your Score:</h2>
+      <p id="score">Loading...</p>
+      <a href="quiz.html">Retry</a> |
+      <a href="welcome.html">Home</a>
+    </div>
+
+    <script>
+      const score = localStorage.getItem("score");
+      document.getElementById("score").innerText = `${score} / 2`;
+    </script>
+  </body>
+</html>
